@@ -77,7 +77,7 @@ class Database {
       }
       finally 
       {
-        close();
+        //close();
       }
     }
     

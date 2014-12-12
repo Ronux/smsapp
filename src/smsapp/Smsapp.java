@@ -17,7 +17,9 @@ public class Smsapp {
         // TODO code application logic here
         Smsapp ex = new Smsapp();
         Register reg = new Register();
-        reg.setVisible(true);
+        SendSms sms = new SendSms();
+        sms.setVisible(true);
+        //reg.setVisible(true);
         //ui.prepareUI();
         
     }
