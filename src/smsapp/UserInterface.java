@@ -24,6 +24,7 @@ import javax.swing.JTextField;
  */
 public class UserInterface {
     
+    // SMS Sending UI
     private JFrame frame;
     private JPanel panel;
     private FlowLayout layout;
@@ -32,6 +33,13 @@ public class UserInterface {
     private JTextField senderField;
     private JTextArea messageField;
     private JButton send;
+    
+    // Register UI
+    private JLabel fnameLabel;
+    private JLabel lnameLabel;
+    private JLabel emailLabel;
+    private JLabel phoneLabel;
+   
     
     public void prepareUI() {
         layout       = new FlowLayout(FlowLayout.LEFT);
@@ -54,7 +62,7 @@ public class UserInterface {
                     
                 if(!number.equals("")){
                     if(message.validate(number)){
-                        message.sendSMS(number, messageString);
+                        //message.sendSMS(number, messageString);
                         Database db = new Database();
                         db.insertLogs(number, messageString);
                         messageField.setText("");
@@ -89,5 +97,12 @@ public class UserInterface {
         frame.setSize(300,350);
         frame.setVisible(true);
         frame.setResizable(false);
+    }
+    
+    public void registerUI()
+    {
+        layout       = new FlowLayout(FlowLayout.LEFT);
+        frame        = new JFrame("SMS App");
+        panel        = new JPanel();
     }
 }

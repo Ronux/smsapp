@@ -16,7 +16,9 @@ public class Smsapp {
     public static void main(String[] args) {
         // TODO code application logic here
         Smsapp ex = new Smsapp();
-        UserInterface ui = new UserInterface();
-        ui.prepareUI();
+        Register reg = new Register();
+        reg.setVisible(true);
+        //ui.prepareUI();
+        
     }
 }
