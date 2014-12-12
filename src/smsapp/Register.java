@@ -161,7 +161,9 @@ public class Register extends javax.swing.JFrame {
 
     private void alreadyRegisteredActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alreadyRegisteredActionPerformed
         // TODO add your handling code here:
-        
+        this.setVisible(false);
+        SendSms sms = new SendSms();
+        sms.setVisible(true);
     }//GEN-LAST:event_alreadyRegisteredActionPerformed
 
     /**

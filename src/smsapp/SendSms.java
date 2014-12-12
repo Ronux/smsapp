@@ -128,7 +128,6 @@ public class SendSms extends javax.swing.JFrame {
                     else
                     {
                         JOptionPane.showMessageDialog(rootPane, "Invalid Number!");
-
                     }
                 }
                 else
