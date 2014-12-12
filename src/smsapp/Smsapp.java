@@ -15,12 +15,10 @@ public class Smsapp {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Smsapp ex = new Smsapp();
         Register reg = new Register();
         SendSms sms = new SendSms();
         sms.setVisible(true);
         //reg.setVisible(true);
-        //ui.prepareUI();
         
     }
 }

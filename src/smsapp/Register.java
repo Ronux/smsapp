@@ -161,8 +161,7 @@ public class Register extends javax.swing.JFrame {
 
     private void alreadyRegisteredActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alreadyRegisteredActionPerformed
         // TODO add your handling code here:
-        UserInterface ui = new UserInterface();
-        ui.prepareUI();
+        
     }//GEN-LAST:event_alreadyRegisteredActionPerformed
 
     /**

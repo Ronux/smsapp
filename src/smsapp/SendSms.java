@@ -107,28 +107,35 @@ public class SendSms extends javax.swing.JFrame {
         final Msg msg = new Msg();
         try
         {
-            if(!senderNumber.equals("")){
-                if(msg.validate(senderNumber)){
-                    // Send SMS
-                    msg.sendSMS(senderNumber, message);
-                    // Insert Log
-                    Database db = new Database();
-                    db.insertLogs(senderNumber, message);
-                    messageArea.setText("");
-                    senderField.setText("");
-                } 
-                else
-                {
-                    JOptionPane.showMessageDialog(rootPane, "Invalid Number!");
-
-                }
-                
+            if(senderNumber.isEmpty() && message.isEmpty())
+            { 
+                JOptionPane.showMessageDialog(rootPane, "Please fill up all fields.");
             }
             else
             {
-                JOptionPane.showMessageDialog(rootPane, "Phone Number Field cannot be empty");
+                if(!senderNumber.equals(""))
+                {
+                    if(msg.validate(senderNumber))
+                    {
+                        // Send SMS
+                        msg.sendSMS(senderNumber, message);
+                        // Insert Log
+                        Database db = new Database();
+                        db.insertLogs(senderNumber, message);
+                        messageArea.setText("");
+                        senderField.setText("");
+                    } 
+                    else
+                    {
+                        JOptionPane.showMessageDialog(rootPane, "Invalid Number!");
+
+                    }
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(rootPane, "Phone Number cannot be empty");
+                }
             }
-            
         }
         catch(Exception e)
         {
