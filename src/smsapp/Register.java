@@ -136,6 +136,8 @@ public class Register extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        getAccessibleContext().setAccessibleDescription("");
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -150,6 +152,10 @@ public class Register extends javax.swing.JFrame {
         {
             Database db = new Database();
             db.register(FirstName, LastName, Email, PhoneNumber);
+            firstNameField.setText("");
+            lastNameField.setText("");
+            emailField.setText("");
+            phoneNumberField.setText("");
             JOptionPane.showMessageDialog(rootPane, "Successfully registered.");
         }
         catch(Exception e)
